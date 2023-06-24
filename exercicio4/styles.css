@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+#content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#content h5 {
+    font-size: 18px;
+    color: #333;
+}
+
+#content p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
