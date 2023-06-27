@@ -4,7 +4,6 @@ $route = $_GET['route'];
 
 // Roteamento
 switch ($route) {
-    case '':
     case 'home':
         // Página inicial
        include 'home.php';

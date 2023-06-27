@@ -7,7 +7,7 @@ class UserDAO {
     private $senha;
     private $conn;
 
-    public function __construct($nome = '', $email = '', $senha = '') {
+    public function __construct($nome = '' , $email='' , $senha='' ) {
         $this->nome = $nome;
         $this->email = $email;
         $this->senha = $senha;
@@ -34,13 +34,20 @@ class UserDAO {
         return $users;
     }
 
-    public function update(){
-
+    public function update($nome,$email,$senha){
+        $sql = "UPDATE user SET nome = ?, email = ?, senha = ?";
+        $result = $this->conn->query($sql);
+        echo $result;
     }
 
-    public function delete(){
-        
+    public function delete($id) {
+        $sql = "DELETE FROM user WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
     }
+    
 
 
 
