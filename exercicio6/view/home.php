@@ -31,6 +31,8 @@
         $userController = new UserController();
         $users = $userController->readUser();
 
+
+
         // Exibir dados na tabela HTML
         if (!empty($users)) {
             $count = 1;

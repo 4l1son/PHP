@@ -1,3 +1,6 @@
+<?php 
+require '../Controller/userController.PHP'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,7 @@
           <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false" onclick="loadPage('profile')">Profile</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false" onclick="loadPage('contact')">Cadastro de usuario</button>
+          <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false" onclick="loadPage('contact')">Cadastro de usuário</button>
         </li>
     </ul>    
 
@@ -32,6 +35,13 @@
             xhttp.open("GET", "router.php?route=" + route, true);
             xhttp.send();
         }
+    </script>
+
+    <script>
+        // Carregar a página inicial ao carregar a página
+        window.addEventListener('DOMContentLoaded', function() {
+            loadPage('home');
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
