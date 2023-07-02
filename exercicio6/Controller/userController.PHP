@@ -1,5 +1,5 @@
 <?php
-require_once '../DAO/userDAO.PHP';
+require_once '../DAO/userDAO.php';
 
 class UserController {
     public function cadUser() {
@@ -11,7 +11,7 @@ class UserController {
             $senha = $_POST['senha'] ?? '';
 
             // Criar uma instância da classe UserDAO
-            $userDAO = new UserDAO($nome, $email, $senha);
+            $userDAO = new UserDAO($nome,$email,$senha);
 
             // Salvar o usuário no banco de dados
             $userDAO->save();
